@@ -8,14 +8,23 @@ namespace CRUD_app.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDBContext _context;
+        public HomeController(ILogger<HomeController> logger, ApplicationDBContext context)
         {
             _logger = logger;
+
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            //return View();
+            //Get All students from the database
+            // Students = table data from the DbContext
+            //ToList() = convert data into a list(collection)
+            var students = _context.Students.ToList();
+
+            return View(students);
         }
 
         public IActionResult Privacy()

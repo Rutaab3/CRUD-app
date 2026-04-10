@@ -1,5 +1,5 @@
-﻿using CRUD_app.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using CRUD_app.Models;
 
 namespace CRUD_app.Models
 {
