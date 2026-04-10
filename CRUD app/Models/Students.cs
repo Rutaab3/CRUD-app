@@ -1,6 +1,6 @@
 ﻿namespace CRUD_app.Models
 {
-    public class CRUD_app
+    public class Students
     {
         //get; set; means we can write and read the values
         public int Id { get; set; }
