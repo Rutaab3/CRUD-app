@@ -1,0 +1,35 @@
+﻿@model List<CRUD_app.Models.Teacher>
+@{
+    ViewData["Title"] = "Teacher";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome222</h1>
+    <p>@(Model?.Count ?? 0)</p>
+    <div>
+        <h2 style="color: #1B3A6B">teacher List</h2>
+        <p style="color: #6B7284">Total teacher <strong>@Model.Count</strong></p>
+
+                <table style="width:100%; border-collapse:collapse"> 
+        <tr style="background-color:#1B2A6B; color:white"> 
+                <th style="padding:10px; text-align:left">Id</th>
+                 <th style="padding:10px; text-align:left">Name</th> 
+                 <th style="padding:10px; text-align:left">Age</th> 
+                <th style="padding:10px; text-align:left">City</th> 
+             </tr>
+
+            @* foreach is C# inside HTML - it loops through every teacher *@
+            @foreach (var teacher in Model)
+            { 
+               <tr style="border-bottom:1px solid #E5E7EB;"> 
+                    <td style="padding:10px">@teacher.Id</td>
+                    <td style="padding:10px">@teacher.Name</td>
+                    <td style="padding:10px">@teacher.Experience</td>
+                    <td style="padding:10px">@teacher.Subject</td>
+                    <td style="padding:10px">@teacher.City</td>
+                </tr> 
+            } 
+        </table>
+    </div>
+</div>
+
