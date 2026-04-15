@@ -14,6 +14,8 @@ namespace CRUD_app.Models
         public DbSet<Students> Students { get; set; }
 
         public DbSet<Teacher> Teacher { get; set; }
+
+        public DbSet<TimeTable> TimeTable { get; set; }
     }
 
 }

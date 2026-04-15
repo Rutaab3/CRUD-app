@@ -18,13 +18,8 @@ namespace CRUD_app.Controllers
 
         public IActionResult Index()
         {
-            //return View();
-            //Get All students from the database
-            // Students = table data from the DbContext
-            //ToList() = convert data into a list(collection)
-            var students = _context.Students.ToList();
 
-            return View(students);
+            return View();
         }
 
         public IActionResult Privacy()
